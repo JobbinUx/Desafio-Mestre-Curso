@@ -78,3 +78,48 @@ void moverCavalo(int passos) {
         }
     }
 }
+
+void moverBispoLoops(int passos) {
+    for (int vertical = 1; vertical <= passos; vertical++) {
+        for (int horizontal = 1; horizontal <= passos; horizontal++) {
+            printf("Bispo (loop): Cima e Direita - vertical %d, horizontal %d\n", vertical, horizontal);
+        }
+    }
+}
+
+int main() {
+    printf("Movimentos da Torre:\n");
+    moverTorreCima(TORRE_PASSOS);
+    moverTorreBaixo(TORRE_PASSOS);
+    moverTorreDireita(TORRE_PASSOS);
+    moverTorreEsquerda(TORRE_PASSOS);
+    printf("\n");
+
+    printf("Movimentos do Bispo (recursivo):\n");
+    moverBispoDiagonal(BISPO_PASSOS, "Cima e Direita");
+    moverBispoDiagonal(BISPO_PASSOS, "Cima e Esquerda");
+    moverBispoDiagonal(BISPO_PASSOS, "Baixo e Direita");
+    moverBispoDiagonal(BISPO_PASSOS, "Baixo e Esquerda");
+    printf("\n");
+
+    printf("Movimentos do Bispo (loops aninhados):\n");
+    moverBispoLoops(BISPO_PASSOS);
+    printf("\n");
+
+    printf("Movimentos da Rainha:\n");
+    moverRainhaCima(RAINHA_PASSOS);
+    moverRainhaBaixo(RAINHA_PASSOS);
+    moverRainhaDireita(RAINHA_PASSOS);
+    moverRainhaEsquerda(RAINHA_PASSOS);
+    moverRainhaDiagonal(RAINHA_PASSOS, "Cima e Direita");
+    moverRainhaDiagonal(RAINHA_PASSOS, "Cima e Esquerda");
+    moverRainhaDiagonal(RAINHA_PASSOS, "Baixo e Direita");
+    moverRainhaDiagonal(RAINHA_PASSOS, "Baixo e Esquerda");
+    printf("\n");
+
+    printf("Movimentos do Cavalo:\n");
+    moverCavalo(CAVALO_PASSOS);
+    printf("\n");
+
+    return 0;
+}
