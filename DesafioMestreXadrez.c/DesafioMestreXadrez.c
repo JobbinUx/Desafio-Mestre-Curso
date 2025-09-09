@@ -123,3 +123,5 @@ int main() {
 
     return 0;
 }
+
+//Funcionalidades ok
